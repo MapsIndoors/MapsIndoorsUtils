@@ -1,28 +1,32 @@
 # MapsIndoorsUtils
 
-[![CI Status](https://img.shields.io/travis/Daniel Nielsen/MapsIndoorsUtils.svg?style=flat)](https://travis-ci.org/Daniel Nielsen/MapsIndoorsUtils)
-[![Version](https://img.shields.io/cocoapods/v/MapsIndoorsUtils.svg?style=flat)](https://cocoapods.org/pods/MapsIndoorsUtils)
-[![License](https://img.shields.io/cocoapods/l/MapsIndoorsUtils.svg?style=flat)](https://cocoapods.org/pods/MapsIndoorsUtils)
-[![Platform](https://img.shields.io/cocoapods/p/MapsIndoorsUtils.svg?style=flat)](https://cocoapods.org/pods/MapsIndoorsUtils)
+> This software is currently beta and is subject to change without notice.
 
-## Example
+In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Currently, the only utility is a rendering helper for placing a badge on an icon image. The result is a larger image with both the original image graphics and the badge placed on top of the image.
 
-## Requirements
+At the moment these customizations can be made:
+
+* Setting the text of the badge
+* Setting the position of the badge
+* Setting the background color of the bagde
+* Setting the font for the text on the badge
+* Setting the font color for the text on the badge
+* Setting the padding of the badge
 
 ## Installation
 
-MapsIndoorsUtils is available through [CocoaPods](https://cocoapods.org). To install
+MapsIndoorsUtils is available as a [CocoaPods](https://cocoapods.org) pod. To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MapsIndoorsUtils'
+pod 'MapsIndoorsUtils', git: => 'https://github.com/MapsIndoors/MapsIndoorsUtilsIOS.git'
 ```
 
-## Author
+## Authors
 
-Daniel Nielsen, dn@mapspeople.com
+Dedicated brains @MapsPeople, mail@mapspeople.com
 
 ## License
 
