@@ -10,6 +10,10 @@ import Foundation
 
 public class BagdedImage {
     
+    
+    /// Renders a new image with a circular or pill shaped text badge on top of it with given configuration.
+    /// - Parameter config: The configuration to use for the badge.
+    /// - Returns: The rendered image with a badge.
     public static func badgedImage(config:BagdedImageConfiguration) -> UIImage? {
         let source = config.sourceImage
         let bagdePosOffset = CGPoint(x: 0.9, y: 0.1)
@@ -110,20 +114,3 @@ public class BagdedImage {
 
     
 }
-
-//extension String {
-//    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-//        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-//        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
-//
-//        return ceil(boundingBox.height)
-//    }
-//
-//    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
-//        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-//        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
-//
-//        return ceil(boundingBox.width)
-//    }
-//}
-
