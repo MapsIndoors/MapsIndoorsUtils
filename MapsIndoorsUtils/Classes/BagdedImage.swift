@@ -8,14 +8,19 @@
 import UIKit
 import Foundation
 
+/// Image helper class that can render a badge on top of another image.
 public class BagdedImage {
-    
     
     /// Renders a new image with a circular or pill shaped text badge on top of it with given configuration.
     /// - Parameter config: The configuration to use for the badge.
     /// - Returns: The rendered image with a badge.
     public static func badgedImage(config:BagdedImageConfiguration) -> UIImage? {
-        let source = config.sourceImage
+        guard let source = config.sourceImage.cgImage else {
+            return nil
+        }
+        
+        let sourceSize = CGSize(width: source.width, height: source.height)
+        
         let bagdePosOffset = CGPoint(x: 0.9, y: 0.1)
         
         let scale = UIScreen.main.scale
@@ -23,8 +28,8 @@ public class BagdedImage {
         let unscaledBadgeSize = (config.badgeText as NSString).size(withAttributes: [NSAttributedString.Key.font : config.badgeFont])
         let badgeSize = CGSize(width: (unscaledBadgeSize.width + padding) * scale, height: (unscaledBadgeSize.height + padding) * scale)
         
-        let badgeWidthFraction = badgeSize.width / source.size.width
-        let badgeHeightFraction = badgeSize.height / source.size.height
+        let badgeWidthFraction = badgeSize.width / sourceSize.width
+        let badgeHeightFraction = badgeSize.height / sourceSize.height
         
         let widthFactor: CGFloat = max(bagdePosOffset.x, 1 - bagdePosOffset.x) + badgeWidthFraction / 2.0
         let heightFactor: CGFloat = max(bagdePosOffset.y, 1 - bagdePosOffset.y) + badgeHeightFraction / 2.0
@@ -33,17 +38,17 @@ public class BagdedImage {
         var newHeight: CGFloat = 1.0
         
         if widthFactor > 1 {
-            newWidth = (widthFactor * 2 - 1) * source.size.width
+            newWidth = (widthFactor * 2 - 1) * sourceSize.width
         }
         if heightFactor > 1 {
-            newHeight = (heightFactor * 2 - 1) * source.size.height
+            newHeight = (heightFactor * 2 - 1) * sourceSize.height
         }
         
         let newSize = CGSize(width: newWidth, height: newHeight)
         
         let imagePos = CGPoint(
-            x: (newWidth - source.size.width) / 2,
-            y: (newHeight - source.size.height) / 2
+            x: (newWidth - sourceSize.width) / 2,
+            y: (newHeight - sourceSize.height) / 2
         )
 
         // start drawing
@@ -51,17 +56,16 @@ public class BagdedImage {
         let context = UIGraphicsGetCurrentContext()!
         context.saveGState()
 
-        if let cgImage = source.cgImage {
-            context.translateBy(x: 0, y: newSize.height)
-            context.scaleBy(x: 1.0, y: -1.0)
-            let rect = CGRect(x: imagePos.x, y: imagePos.y, width: source.size.width, height: source.size.height)
-            context.draw(cgImage, in: rect)
-        }
+        context.translateBy(x: 0, y: newSize.height)
+        context.scaleBy(x: 1.0, y: -1.0)
+        let rect = CGRect(x: imagePos.x, y: imagePos.y, width: sourceSize.width, height: sourceSize.height)
+        context.draw(source, in: rect)
+        
         context.restoreGState()
         
         let badgeRect = CGRect(
-            x: imagePos.x + source.size.width * bagdePosOffset.x - badgeSize.width / 2.0,
-            y: imagePos.y + source.size.height * bagdePosOffset.y - badgeSize.height / 2.0,
+            x: imagePos.x + sourceSize.width * bagdePosOffset.x - badgeSize.width / 2.0,
+            y: imagePos.y + sourceSize.height * bagdePosOffset.y - badgeSize.height / 2.0,
             width: badgeSize.width,
             height: badgeSize.height
         )
