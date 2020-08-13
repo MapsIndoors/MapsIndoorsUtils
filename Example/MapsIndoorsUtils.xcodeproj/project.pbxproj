@@ -12,14 +12,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		199E4C5E1F6543BD458C62A1 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MapsIndoorsUtils.podspec; path = ../MapsIndoorsUtils.podspec; sourceTree = "<group>"; };
+		199E4C5E1F6543BD458C62A1 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MapsIndoorsUtils.podspec; path = ../MapsIndoorsUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACE51AFB9204008FA782 /* MapsIndoorsUtils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsIndoorsUtils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66EC5DD4C51F8D9B4720D3F9 /* Pods-MapsIndoorsUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsUtils_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsUtils_Tests/Pods-MapsIndoorsUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7A7DCAAE83F37E10C11C774E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7A7DCAAE83F37E10C11C774E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C0934B92393F90A8AC48B261 /* Pods-MapsIndoorsUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsUtils_Tests.release.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsUtils_Tests/Pods-MapsIndoorsUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D37905A4ABFB35D2AA6EF35E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D37905A4ABFB35D2AA6EF35E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E72950910436A38A395F0E27 /* Pods_MapsIndoorsUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,6 @@
 				66EC5DD4C51F8D9B4720D3F9 /* Pods-MapsIndoorsUtils_Tests.debug.xcconfig */,
 				C0934B92393F90A8AC48B261 /* Pods-MapsIndoorsUtils_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -127,16 +126,13 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = A8V6656PYZ;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -147,6 +143,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -328,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66EC5DD4C51F8D9B4720D3F9 /* Pods-MapsIndoorsUtils_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A8V6656PYZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -350,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0934B92393F90A8AC48B261 /* Pods-MapsIndoorsUtils_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A8V6656PYZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
