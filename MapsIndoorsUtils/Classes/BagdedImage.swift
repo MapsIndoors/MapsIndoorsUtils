@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 
 /// Image helper class that can render a badge on top of another image.
+@objcMembers
 public class BagdedImage {
     
     /// Renders a new image with a circular or pill shaped text badge on top of it with given configuration.

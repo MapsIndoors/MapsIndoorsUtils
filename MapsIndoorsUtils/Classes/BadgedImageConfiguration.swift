@@ -10,6 +10,7 @@ import Foundation
 
 
 /// Badge position model. Use the static getters to get positions for top right, top left, bottom left and bottom right.
+@objcMembers
 public class BagdePosition {
     /// Static getter a top right position value.
     public static let topRight = BagdePosition(x: 0.9, y: 0.1)
@@ -26,6 +27,7 @@ public class BagdePosition {
 }
 
 /// Badge image configuration model.
+@objcMembers
 public class BagdedImageConfiguration {
     /// The source image.
     public let sourceImage:UIImage
