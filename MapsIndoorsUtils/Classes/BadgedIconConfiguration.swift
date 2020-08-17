@@ -11,7 +11,7 @@ import Foundation
 
 /// Badge position model. Use the static getters to get positions for top right, top left, bottom left and bottom right.
 @objcMembers
-public class BagdePosition {
+public class BagdePosition : NSObject {
     /// Static getter a top right position value.
     public static let topRight = BagdePosition(x: 0.9, y: 0.1)
     /// Static getter a top left position value.
@@ -21,16 +21,17 @@ public class BagdePosition {
     /// Static getter a bottom left position value.
     public static let bottomLeft = BagdePosition(x: 0.1, y: 0.9)
     let point: CGPoint
-    init(x:CGFloat, y:CGFloat) {
+    
+    @objc public init(x:CGFloat, y:CGFloat) {
         point = CGPoint(x: x, y: y)
     }
 }
 
-/// Badge image configuration model.
+/// Badge icon configuration model.
 @objcMembers
-public class BagdedImageConfiguration {
-    /// The source image.
-    public let sourceImage:UIImage
+public class BagdedIconConfiguration : NSObject {
+    /// The source icon image.
+    public let originalIcon:UIImage
     /// The badge text that should be rendered inside the badge.
     public let badgeText:String
     /// Set the badge text color.
@@ -44,9 +45,12 @@ public class BagdedImageConfiguration {
     /// Set the position of the badge. Default is top right.
     public var bagdePosition:BagdePosition
     
-    /// Badge image configuration model.
-    public init(sourceImage:UIImage, badgeText:String) {
-        self.sourceImage = sourceImage
+    /// Badge icon configuration initialiser.
+    /// - Parameters:
+    ///   - originalIcon: The original icon image on which a badge must be added.
+    ///   - badgeText: The badge text string.
+    public init(originalIcon:UIImage, badgeText:String) {
+        self.originalIcon = originalIcon
         self.badgeText = badgeText
         self.badgeTextColor = .white
         self.badgePadding = 2

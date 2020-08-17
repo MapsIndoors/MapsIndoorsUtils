@@ -10,13 +10,13 @@ import Foundation
 
 /// Image helper class that can render a badge on top of another image.
 @objcMembers
-public class BagdedImage {
+public class BagdedIcon : NSObject {
     
     /// Renders a new image with a circular or pill shaped text badge on top of it with given configuration.
     /// - Parameter config: The configuration to use for the badge.
     /// - Returns: The rendered image with a badge.
-    public static func badgedImage(config:BagdedImageConfiguration) -> UIImage? {
-        guard let source = config.sourceImage.cgImage else {
+    public static func bagdedIcon(config:BagdedIconConfiguration) -> UIImage? {
+        guard let source = config.originalIcon.cgImage else {
             return nil
         }
         
