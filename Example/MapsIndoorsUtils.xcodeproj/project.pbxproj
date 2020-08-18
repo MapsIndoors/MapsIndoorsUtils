@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A2BD6A3124EC113C00AA1757 /* MapsIndoorsUtilsFat */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A2BD6A3224EC113C00AA1757 /* Build configuration list for PBXAggregateTarget "MapsIndoorsUtilsFat" */;
+			buildPhases = (
+				A2BD6A3524EC114300AA1757 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MapsIndoorsUtilsFat;
+			productName = MapsIndoorsUtilsFat;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A2BD6A2924EC0A8900AA1757 /* MapsIndoorsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BD6A2724EC0A8900AA1757 /* MapsIndoorsUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -199,6 +213,11 @@
 						LastSwiftMigration = 1160;
 						ProvisioningStyle = Automatic;
 					};
+					A2BD6A3124EC113C00AA1757 = {
+						CreatedOnToolsVersion = 11.6;
+						DevelopmentTeam = A8V6656PYZ;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "MapsIndoorsUtils" */;
@@ -217,6 +236,7 @@
 			targets = (
 				607FACE41AFB9204008FA782 /* MapsIndoorsUtils_Tests */,
 				A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */,
+				A2BD6A3124EC113C00AA1757 /* MapsIndoorsUtilsFat */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +276,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsUtils_Tests/Pods-MapsIndoorsUtils_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A2BD6A3524EC114300AA1757 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"MapsIndoorsUtils\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${OUTPUT_DIR}\" ]; then\nrm -rf \"${OUTPUT_DIR}\"\nfi\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\n\nxcodebuild -project \"${FRAMEWORK_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\"\nxcodebuild -project \"${FRAMEWORK_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\"\n\n# 5\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# 6\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework. The device mappings already exist from step 6.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\nsharpie bind --sdk=iphoneos --output=\"MapsIndoorsUtilsForXamarinIOS\" --namespace=\"Binding\" --scope=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" --output \"../XamarinBindings\"\n";
 		};
 		C8796574DCC635D37597EA00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -471,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapspeople.MapsIndoorsUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -509,6 +547,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapspeople.MapsIndoorsUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -516,6 +555,24 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2BD6A3324EC113C00AA1757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2BD6A3424EC113C00AA1757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -545,6 +602,15 @@
 			buildConfigurations = (
 				A2BD6A2B24EC0A8900AA1757 /* Debug */,
 				A2BD6A2C24EC0A8900AA1757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2BD6A3224EC113C00AA1757 /* Build configuration list for PBXAggregateTarget "MapsIndoorsUtilsFat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2BD6A3324EC113C00AA1757 /* Debug */,
+				A2BD6A3424EC113C00AA1757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
