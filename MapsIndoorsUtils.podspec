@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MapsIndoorsUtils'
-  s.version          = ENV['LIB_VERSION'] || '0.1.0-alpha' #fallback to first version
+  s.version          = ENV['LIB_VERSION'] || '0.1.0-alpha2' #fallback to first version
   s.summary          = 'A small library of utilities and helpers relevant for MapsIndoors IOS SDK.'
 
 # This description is used to generate tags and improve search results.

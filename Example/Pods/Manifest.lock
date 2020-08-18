@@ -1,5 +1,5 @@
 PODS:
-  - MapsIndoorsUtils (0.1.0)
+  - MapsIndoorsUtils (0.1.0-alpha2)
 
 DEPENDENCIES:
   - MapsIndoorsUtils (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MapsIndoorsUtils: 3da15670c4710c473d91f467684241142eb87e80
+  MapsIndoorsUtils: 886c752861fba0faa878cbf11f201a18e69a547f
 
 PODFILE CHECKSUM: eaa2b36715b26245a4e6cf9980a71a87148542b0
 
