@@ -22,7 +22,7 @@ public class BagdedIcon : NSObject {
         
         let sourceSize = CGSize(width: source.width, height: source.height)
         
-        let bagdePosOffset = CGPoint(x: 0.9, y: 0.1)
+        let bagdePosOffset = config.bagdePosition.point
         
         let scale = UIScreen.main.scale
         let padding = config.badgePadding * 2.0

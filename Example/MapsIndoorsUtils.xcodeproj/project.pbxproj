@@ -22,11 +22,26 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A2B562E124F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2B562E924F8FB1400F304DA /* MPBadgedIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */; };
+		A2B562EA24F8FB1400F304DA /* MPBadgedIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B562E824F8FB1400F304DA /* MPBadgedIcon.m */; };
+		A2B562ED24F8FB3300F304DA /* MPBadgedIconConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562EB24F8FB3300F304DA /* MPBadgedIconConfiguration.h */; };
+		A2B562EE24F8FB3300F304DA /* MPBadgedIconConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B562EC24F8FB3300F304DA /* MPBadgedIconConfiguration.m */; };
 		A2BD6A2924EC0A8900AA1757 /* MapsIndoorsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BD6A2724EC0A8900AA1757 /* MapsIndoorsUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2BD6A2F24EC0AF300AA1757 /* BadgedIconConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD6A2D24EC0AF300AA1757 /* BadgedIconConfiguration.swift */; };
 		A2BD6A3024EC0AF300AA1757 /* BagdedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD6A2E24EC0AF300AA1757 /* BagdedIcon.swift */; };
 		FEBC4158D421896B981C8A92 /* Pods_MapsIndoorsUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72950910436A38A395F0E27 /* Pods_MapsIndoorsUtils_Tests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2B562E524F8FA8A00F304DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2BD6A2424EC0A8900AA1757;
+			remoteInfo = MapsIndoorsUtils;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		199E4C5E1F6543BD458C62A1 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MapsIndoorsUtils.podspec; path = ../MapsIndoorsUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -35,6 +50,13 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66EC5DD4C51F8D9B4720D3F9 /* Pods-MapsIndoorsUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsUtils_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsUtils_Tests/Pods-MapsIndoorsUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A7DCAAE83F37E10C11C774E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A2B562DD24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapsIndoorsUtilsXamarinIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsIndoorsUtilsXamarinIOS.h; sourceTree = "<group>"; };
+		A2B562E024F8FA6500F304DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPBadgedIcon.h; sourceTree = "<group>"; };
+		A2B562E824F8FB1400F304DA /* MPBadgedIcon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPBadgedIcon.m; sourceTree = "<group>"; };
+		A2B562EB24F8FB3300F304DA /* MPBadgedIconConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPBadgedIconConfiguration.h; sourceTree = "<group>"; };
+		A2B562EC24F8FB3300F304DA /* MPBadgedIconConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPBadgedIconConfiguration.m; sourceTree = "<group>"; };
 		A2BD6A2524EC0A8900AA1757 /* MapsIndoorsUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapsIndoorsUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BD6A2724EC0A8900AA1757 /* MapsIndoorsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsIndoorsUtils.h; sourceTree = "<group>"; };
 		A2BD6A2824EC0A8900AA1757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +73,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBC4158D421896B981C8A92 /* Pods_MapsIndoorsUtils_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B562DA24F8FA6500F304DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +116,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				A2BD6A2624EC0A8900AA1757 /* MapsIndoorsUtils */,
+				A2B562DE24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS */,
 				607FACD11AFB9204008FA782 /* Products */,
 				04635C49D9DA9C440B955266 /* Pods */,
 				4B80E2F9714728164619896C /* Frameworks */,
@@ -98,6 +128,7 @@
 			children = (
 				607FACE51AFB9204008FA782 /* MapsIndoorsUtils_Tests.xctest */,
 				A2BD6A2524EC0A8900AA1757 /* MapsIndoorsUtils.framework */,
+				A2B562DD24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +160,19 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		A2B562DE24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */,
+				A2B562E024F8FA6500F304DA /* Info.plist */,
+				A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */,
+				A2B562E824F8FB1400F304DA /* MPBadgedIcon.m */,
+				A2B562EB24F8FB3300F304DA /* MPBadgedIconConfiguration.h */,
+				A2B562EC24F8FB3300F304DA /* MPBadgedIconConfiguration.m */,
+			);
+			path = MapsIndoorsUtilsXamarinIOS;
+			sourceTree = "<group>";
+		};
 		A2BD6A2624EC0A8900AA1757 /* MapsIndoorsUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +187,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A2B562D824F8FA6500F304DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B562E124F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h in Headers */,
+				A2B562ED24F8FB3300F304DA /* MPBadgedIconConfiguration.h in Headers */,
+				A2B562E924F8FB1400F304DA /* MPBadgedIcon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2BD6A2024EC0A8900AA1757 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,6 +226,25 @@
 			productName = Tests;
 			productReference = 607FACE51AFB9204008FA782 /* MapsIndoorsUtils_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2B562DC24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B562E424F8FA6500F304DA /* Build configuration list for PBXNativeTarget "MapsIndoorsUtilsXamarinIOS" */;
+			buildPhases = (
+				A2B562D824F8FA6500F304DA /* Headers */,
+				A2B562D924F8FA6500F304DA /* Sources */,
+				A2B562DA24F8FA6500F304DA /* Frameworks */,
+				A2B562DB24F8FA6500F304DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B562E624F8FA8A00F304DA /* PBXTargetDependency */,
+			);
+			name = MapsIndoorsUtilsXamarinIOS;
+			productName = MapsIndoorsUtilsXamarinIOS;
+			productReference = A2B562DD24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */ = {
 			isa = PBXNativeTarget;
@@ -207,6 +280,11 @@
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
+					A2B562DC24F8FA6500F304DA = {
+						CreatedOnToolsVersion = 11.6;
+						DevelopmentTeam = A8V6656PYZ;
+						ProvisioningStyle = Automatic;
+					};
 					A2BD6A2424EC0A8900AA1757 = {
 						CreatedOnToolsVersion = 11.6;
 						DevelopmentTeam = A8V6656PYZ;
@@ -237,12 +315,20 @@
 				607FACE41AFB9204008FA782 /* MapsIndoorsUtils_Tests */,
 				A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */,
 				A2BD6A3124EC113C00AA1757 /* MapsIndoorsUtilsFat */,
+				A2B562DC24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B562DB24F8FA6500F304DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,6 +413,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2B562D924F8FA6500F304DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B562EA24F8FB1400F304DA /* MPBadgedIcon.m in Sources */,
+				A2B562EE24F8FB3300F304DA /* MPBadgedIconConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2BD6A2124EC0A8900AA1757 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +432,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2B562E624F8FA8A00F304DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */;
+			targetProxy = A2B562E524F8FA8A00F304DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -480,6 +583,74 @@
 			};
 			name = Release;
 		};
+		A2B562E224F8FA6500F304DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MapsIndoorsUtilsXamarinIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapspeople.MapsIndoorsUtilsXamarinIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A2B562E324F8FA6500F304DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MapsIndoorsUtilsXamarinIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapspeople.MapsIndoorsUtilsXamarinIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A2BD6A2B24EC0A8900AA1757 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -593,6 +764,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B562E424F8FA6500F304DA /* Build configuration list for PBXNativeTarget "MapsIndoorsUtilsXamarinIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B562E224F8FA6500F304DA /* Debug */,
+				A2B562E324F8FA6500F304DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
