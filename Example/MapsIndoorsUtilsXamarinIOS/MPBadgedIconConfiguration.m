@@ -17,19 +17,19 @@
 @implementation MPBagdePosition
 
 + (MPBagdePosition *)topLeft {
-    return [[MPBagdePosition alloc] initWithX:0 y:0];
+    return [[MPBagdePosition alloc] initWithX:0.9 y:0.1];
 }
 
 + (MPBagdePosition *)topRight {
-    return [[MPBagdePosition alloc] initWithX:0 y:0];
+    return [[MPBagdePosition alloc] initWithX:0.1 y:0.1];
 }
 
 + (MPBagdePosition *)bottomLeft {
-    return [[MPBagdePosition alloc] initWithX:0 y:0];
+    return [[MPBagdePosition alloc] initWithX:0.1 y:0.9];
 }
 
 + (MPBagdePosition *)bottomRight {
-    return [[MPBagdePosition alloc] initWithX:0 y:0];
+    return [[MPBagdePosition alloc] initWithX:0.9 y:0.9];
 }
 
 - (instancetype) initWithX:(CGFloat)x y:(CGFloat)y {
