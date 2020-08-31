@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2BD6A2424EC0A8900AA1757"
-               BuildableName = "MapsIndoorsUtils.framework"
-               BlueprintName = "MapsIndoorsUtils"
+               BlueprintIdentifier = "A2B562DC24F8FA6500F304DA"
+               BuildableName = "MapsIndoorsUtilsXamarinIOS.framework"
+               BlueprintName = "MapsIndoorsUtilsXamarinIOS"
                ReferencedContainer = "container:MapsIndoorsUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2BD6A2424EC0A8900AA1757"
-            BuildableName = "MapsIndoorsUtils.framework"
-            BlueprintName = "MapsIndoorsUtils"
+            BlueprintIdentifier = "A2B562DC24F8FA6500F304DA"
+            BuildableName = "MapsIndoorsUtilsXamarinIOS.framework"
+            BlueprintName = "MapsIndoorsUtilsXamarinIOS"
             ReferencedContainer = "container:MapsIndoorsUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

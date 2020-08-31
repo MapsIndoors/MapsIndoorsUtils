@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MPBagdePosition : NSObject
 /// Static getter a top right position value.
-+ (MPBagdePosition*) topRight;
+@property (class, nonatomic, strong, readonly) MPBagdePosition* topRight;
 /// Static getter a top left position value.
-+ (MPBagdePosition*) topLeft;
+@property (class, nonatomic, strong, readonly) MPBagdePosition* topLeft;
 /// Static getter a bottom right position value.
-+ (MPBagdePosition*) bottomRight;
+@property (class, nonatomic, strong, readonly) MPBagdePosition* bottomRight;
 /// Static getter a bottom left position value.
-+ (MPBagdePosition*) bottomLeft;
+@property (class, nonatomic, strong, readonly) MPBagdePosition* bottomLeft;
 
 @property (nonatomic, readonly) CGPoint point;
 
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The badge text that should be rendered inside the badge.
 @property (nonatomic, strong, readonly) NSString* badgeText;
 /// Set the badge text color.
-@property (nonatomic) UIColor* badgeTextColor;
+@property (nonatomic, strong) UIColor* badgeTextColor;
 /// Set the padding between the badge text and the edge of the badge. Default is 2 points.
 @property (nonatomic) CGFloat badgePadding;
 /// Set the background color for the badge. Default is DarkGray.

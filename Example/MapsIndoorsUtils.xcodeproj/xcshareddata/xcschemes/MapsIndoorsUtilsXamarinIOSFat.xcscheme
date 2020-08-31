@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2BD6A2424EC0A8900AA1757"
-               BuildableName = "MapsIndoorsUtils.framework"
-               BlueprintName = "MapsIndoorsUtils"
+               BlueprintIdentifier = "A2B562F724FD2B4D00F304DA"
+               BuildableName = "MapsIndoorsUtilsXamarinIOSFat"
+               BlueprintName = "MapsIndoorsUtilsXamarinIOSFat"
                ReferencedContainer = "container:MapsIndoorsUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2BD6A2424EC0A8900AA1757"
-            BuildableName = "MapsIndoorsUtils.framework"
-            BlueprintName = "MapsIndoorsUtils"
+            BlueprintIdentifier = "A2B562F724FD2B4D00F304DA"
+            BuildableName = "MapsIndoorsUtilsXamarinIOSFat"
+            BlueprintName = "MapsIndoorsUtilsXamarinIOSFat"
             ReferencedContainer = "container:MapsIndoorsUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

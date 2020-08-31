@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		A2B562F724FD2B4D00F304DA /* MapsIndoorsUtilsXamarinIOSFat */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A2B562F924FD2B4D00F304DA /* Build configuration list for PBXAggregateTarget "MapsIndoorsUtilsXamarinIOSFat" */;
+			buildPhases = (
+				A2B562F824FD2B4D00F304DA /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MapsIndoorsUtilsXamarinIOSFat;
+			productName = MapsIndoorsUtilsFat;
+		};
 		A2BD6A3124EC113C00AA1757 /* MapsIndoorsUtilsFat */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = A2BD6A3224EC113C00AA1757 /* Build configuration list for PBXAggregateTarget "MapsIndoorsUtilsFat" */;
@@ -23,26 +34,16 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A2B562E124F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2B562E924F8FB1400F304DA /* MPBadgedIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */; };
+		A2B562E924F8FB1400F304DA /* MPBadgedIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2B562EA24F8FB1400F304DA /* MPBadgedIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B562E824F8FB1400F304DA /* MPBadgedIcon.m */; };
-		A2B562ED24F8FB3300F304DA /* MPBadgedIconConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562EB24F8FB3300F304DA /* MPBadgedIconConfiguration.h */; };
+		A2B562ED24F8FB3300F304DA /* MPBadgedIconConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562EB24F8FB3300F304DA /* MPBadgedIconConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2B562EE24F8FB3300F304DA /* MPBadgedIconConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B562EC24F8FB3300F304DA /* MPBadgedIconConfiguration.m */; };
-		A2B562EF24FD0B0600F304DA /* MapsIndoorsUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BD6A2524EC0A8900AA1757 /* MapsIndoorsUtils.framework */; };
+		A2B562FC24FD2C5F00F304DA /* MapsIndoorsUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BD6A2524EC0A8900AA1757 /* MapsIndoorsUtils.framework */; };
 		A2BD6A2924EC0A8900AA1757 /* MapsIndoorsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BD6A2724EC0A8900AA1757 /* MapsIndoorsUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2BD6A2F24EC0AF300AA1757 /* BadgedIconConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD6A2D24EC0AF300AA1757 /* BadgedIconConfiguration.swift */; };
 		A2BD6A3024EC0AF300AA1757 /* BagdedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD6A2E24EC0AF300AA1757 /* BagdedIcon.swift */; };
 		FEBC4158D421896B981C8A92 /* Pods_MapsIndoorsUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72950910436A38A395F0E27 /* Pods_MapsIndoorsUtils_Tests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A2B562E524F8FA8A00F304DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2BD6A2424EC0A8900AA1757;
-			remoteInfo = MapsIndoorsUtils;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		199E4C5E1F6543BD458C62A1 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MapsIndoorsUtils.podspec; path = ../MapsIndoorsUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -81,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B562EF24FD0B0600F304DA /* MapsIndoorsUtils.framework in Frameworks */,
+				A2B562FC24FD2C5F00F304DA /* MapsIndoorsUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +242,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A2B562E624F8FA8A00F304DA /* PBXTargetDependency */,
 			);
 			name = MapsIndoorsUtilsXamarinIOS;
 			productName = MapsIndoorsUtilsXamarinIOS;
@@ -287,6 +287,10 @@
 						DevelopmentTeam = A8V6656PYZ;
 						ProvisioningStyle = Automatic;
 					};
+					A2B562F724FD2B4D00F304DA = {
+						DevelopmentTeam = A8V6656PYZ;
+						ProvisioningStyle = Automatic;
+					};
 					A2BD6A2424EC0A8900AA1757 = {
 						CreatedOnToolsVersion = 11.6;
 						DevelopmentTeam = A8V6656PYZ;
@@ -318,6 +322,7 @@
 				A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */,
 				A2BD6A3124EC113C00AA1757 /* MapsIndoorsUtilsFat */,
 				A2B562DC24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS */,
+				A2B562F724FD2B4D00F304DA /* MapsIndoorsUtilsXamarinIOSFat */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +370,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsUtils_Tests/Pods-MapsIndoorsUtils_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2B562F824FD2B4D00F304DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n# 2\n# Setup some constants for use later on.\nPROJECT_NAME=\"MapsIndoorsUtils\"\nFRAMEWORK_NAME=\"MapsIndoorsUtilsXamarinIOS\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n# 3\n# If remnants from a previous build exist, delete them.\n#if [ -d \"${OUTPUT_DIR}\" ]; then\n#rm -rf \"${OUTPUT_DIR}\"\n#fi\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\n\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\"\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\"\n\n# 5\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# 6\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework. The device mappings already exist from step 6.\n#cp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Run the xamarin binding command with the fat framework\n\nsharpie bind --sdk=iphoneos --output=\"MapsIndoorsUtilsForXamarinIOS\" --namespace=\"Binding\" --scope=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}.h\" --output \"../Xamarin/${PROJECT_NAME}\"\n\nmv -f \"../Xamarin/${PROJECT_NAME}/ApiDefinitions.cs\" \"../Xamarin/${PROJECT_NAME}/ApiDefinition.cs\"\n";
+		};
 		A2BD6A3524EC114300AA1757 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n# 2\n# Setup some constants for use later on.\nPROJECT_NAME=\"MapsIndoorsUtils\"\nFRAMEWORK_NAME=\"MapsIndoorsUtilsXamarinIOS\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${OUTPUT_DIR}\" ]; then\nrm -rf \"${OUTPUT_DIR}\"\nfi\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\n\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\"\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\"\n\n# 5\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# 6\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework. The device mappings already exist from step 6.\n#cp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Run the xamarin binding command with the fat framework\n\nsharpie bind --sdk=iphoneos --output=\"MapsIndoorsUtilsForXamarinIOS\" --namespace=\"Binding\" --scope=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}.h\" --output \"../XamarinBindings\"\n";
+			shellScript = "# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n# 2\n# Setup some constants for use later on.\nPROJECT_NAME=\"MapsIndoorsUtils\"\nFRAMEWORK_NAME=\"MapsIndoorsUtils\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n# 3\n# If remnants from a previous build exist, delete them.\n#if [ -d \"${OUTPUT_DIR}\" ]; then\n#rm -rf \"${OUTPUT_DIR}\"\n#fi\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\n\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\"\nxcodebuild -project \"${PROJECT_NAME}.xcodeproj\" -scheme \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\"\n\n# 5\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# 6\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n";
 		};
 		C8796574DCC635D37597EA00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -434,14 +456,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A2B562E624F8FA8A00F304DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A2BD6A2424EC0A8900AA1757 /* MapsIndoorsUtils */;
-			targetProxy = A2B562E524F8FA8A00F304DA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -612,6 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapspeople.MapsIndoorsUtilsXamarinIOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -652,6 +667,24 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2B562FA24FD2B4D00F304DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2B562FB24FD2B4D00F304DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -777,6 +810,15 @@
 			buildConfigurations = (
 				A2B562E224F8FA6500F304DA /* Debug */,
 				A2B562E324F8FA6500F304DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B562F924FD2B4D00F304DA /* Build configuration list for PBXAggregateTarget "MapsIndoorsUtilsXamarinIOSFat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B562FA24FD2B4D00F304DA /* Debug */,
+				A2B562FB24FD2B4D00F304DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
