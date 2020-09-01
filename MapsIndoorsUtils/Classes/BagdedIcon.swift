@@ -27,7 +27,12 @@ public class BagdedIcon : NSObject {
         let scale = UIScreen.main.scale
         let padding = config.badgePadding * 2.0
         let unscaledBadgeSize = (config.badgeText as NSString).size(withAttributes: [NSAttributedString.Key.font : config.badgeFont])
-        let badgeSize = CGSize(width: (unscaledBadgeSize.width + padding) * scale, height: (unscaledBadgeSize.height + padding) * scale)
+        var badgeWidth = (unscaledBadgeSize.width + padding) * scale
+        var badgeHeight = (unscaledBadgeSize.height + padding) * scale
+        if badgeWidth < badgeHeight {
+            badgeWidth = badgeHeight
+        }
+        let badgeSize = CGSize(width: badgeWidth, height: badgeHeight)
         
         let badgeWidthFraction = badgeSize.width / sourceSize.width
         let badgeHeightFraction = badgeSize.height / sourceSize.height
