@@ -10,7 +10,7 @@ public class ConfigBuilder {
     private int badgeTextColor = Color.WHITE;
     private float badgePadding = 2;
     private int badgeBackgroundColor = Color.DKGRAY;
-    private Typeface badgeFont = Typeface.createFromFile("/system/fonts/roboto.ttf");
+    private Typeface badgeFont = Typeface.createFromFile("/system/fonts/DroidSans.ttf");
     private BagdePosition bagdePosition = BagdePosition.topRight;
 
     public ConfigBuilder setOriginalIcon(Bitmap originalIcon) {
@@ -46,6 +46,11 @@ public class ConfigBuilder {
     public ConfigBuilder setBagdePosition(BagdePosition bagdePosition) {
         this.bagdePosition = bagdePosition;
         return this;
+    }
+
+    public ConfigBuilder(Bitmap originalIcon, String badgeText) {
+        this.originalIcon = originalIcon;
+        this.badgeText = badgeText;
     }
 
     public Config build() {
