@@ -18,11 +18,20 @@ public class BadgedIcon {
             this.width = width;
             this.height = height;
         }
+
+        @Override
+        public String toString() {
+            return "Size{" +
+                    "width=" + width +
+                    ", height=" + height +
+                    '}';
+        }
     }
 
     public static Bitmap badgedIcon(Config config) {
 
         Bitmap source = config.getOriginalIcon();
+        float scale = config.getDensity();
 
         Size sourceSize = new Size(source.getWidth(), source.getHeight());
 
@@ -31,17 +40,17 @@ public class BadgedIcon {
         TextPaint tp = new TextPaint();
         tp.setTypeface(config.getBadgeFont());
         tp.setColor( config.getBadgeTextColor() );
+        tp.setTextSize(config.getFontSize() * scale);
 
         Rect textBounds = new Rect();
 
         String text = config.getBadgeText();
 
         tp.getTextBounds( text, 0, text.length(), textBounds );
-
-        float scale = 3;//UIScreen.main.scale
-        float padding = config.getBadgePadding() * 2.0f;
-        float badgeWidth = (textBounds.width() + padding) * scale;
-        float badgeHeight = (textBounds.height() + padding) * scale;
+        float scaledPadding = config.getBadgePadding() * scale;
+        float totalPadding = scaledPadding * 2.0f;
+        float badgeWidth = (textBounds.width() + totalPadding);
+        float badgeHeight = (textBounds.height() + totalPadding);
         if (badgeWidth < badgeHeight) {
             badgeWidth = badgeHeight;
         }
@@ -70,16 +79,20 @@ public class BadgedIcon {
                 (newHeight - sourceSize.height) / 2
         );
 
-        // Now add the icon on the left side of the background rect
+        PointF badgeTopLeft = new PointF(imagePos.x + (sourceSize.width * bagdePosOffset.x) - (badgeWidth / 2), imagePos.y + (sourceSize.height * bagdePosOffset.y) - (badgeHeight / 2));
+
+
         Bitmap result = Bitmap.createBitmap( (int)newSize.width, (int)newSize.height, Bitmap.Config.ARGB_8888 );
         Canvas canvas = new Canvas( result );
 
         canvas.drawBitmap(config.getOriginalIcon(), imagePos.x, imagePos.y, new Paint());
 
+        RectF badgeRect = new RectF(badgeTopLeft.x, badgeTopLeft.y, badgeTopLeft.x + badgeWidth, badgeTopLeft.y + badgeHeight);
         Paint background = new Paint();
         background.setColor(config.getBadgeBackgroundColor());
+        drawBadge(text, tp, background, config.getBadgeFont(), badgeRect, scaledPadding, canvas);
 
-        //drawBadge(text, tp, background, config.getBadgePadding(), config.getBadgeFont(), canvas);
+        result.setDensity(Math.round(scale));
 
         return result;
 
@@ -89,15 +102,15 @@ public class BadgedIcon {
 
     private static void drawBadge( String text, TextPaint textPaint, Paint backgroundPaint, Typeface typeface, RectF rect, float padding, Canvas canvas) {
 
-        canvas.drawRoundRect( rect, 5.0f, 5.0f, backgroundPaint );
+        float shortestSideOfRect = Math.min(rect.height(), rect.width());
 
-        // stroke circle
-        //background.setColor( Color.WHITE );
-        //background.setStyle( Paint.Style.STROKE );
-        //background.setStrokeWidth( 2 );
-        //canvas.drawCircle( radius, radius, radius - 1, background );
+        float rectRadius = shortestSideOfRect / 2;
 
-        canvas.drawText( text, 0, 0, textPaint );
+        canvas.drawRoundRect( rect, rectRadius, rectRadius, backgroundPaint );
+
+        textPaint.setTextAlign(Paint.Align.CENTER);
+
+        canvas.drawText( text, rect.centerX(), rect.bottom - padding, textPaint );
 
     }
 

@@ -23,6 +23,10 @@ public class Config {
     private Typeface badgeFont;
     /// Set the position of the badge. Default is top right.
     private BagdePosition bagdePosition;
+    /// Set the font size of the badge. Default is 12 points.
+    private float fontSize;
+    /// Set the density of the resulting image. Default is 2 (xhdpi).
+    private float density;
 
     /// Badge icon configuration constructor.
     /// - Parameters:
@@ -36,6 +40,8 @@ public class Config {
         this.badgeBackgroundColor = builder.getBadgeBackgroundColor();
         this.badgeFont = builder.getBadgeFont();
         this.bagdePosition = builder.getBagdePosition();
+        this.fontSize = builder.getFontSize();
+        this.density = builder.getDensity();
     }
 
 
@@ -65,5 +71,13 @@ public class Config {
 
     public BagdePosition getBagdePosition() {
         return bagdePosition;
+    }
+
+    public float getFontSize() {
+        return fontSize;
+    }
+
+    public float getDensity() {
+        return density;
     }
 }

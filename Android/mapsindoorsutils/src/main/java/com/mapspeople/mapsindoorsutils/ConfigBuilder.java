@@ -12,6 +12,8 @@ public class ConfigBuilder {
     private int badgeBackgroundColor = Color.DKGRAY;
     private Typeface badgeFont = Typeface.createFromFile("/system/fonts/DroidSans.ttf");
     private BagdePosition bagdePosition = BagdePosition.topRight;
+    private float fontSize = 12.0f;
+    private float density = 2.0f;
 
     public ConfigBuilder setOriginalIcon(Bitmap originalIcon) {
         this.originalIcon = originalIcon;
@@ -45,6 +47,16 @@ public class ConfigBuilder {
 
     public ConfigBuilder setBagdePosition(BagdePosition bagdePosition) {
         this.bagdePosition = bagdePosition;
+        return this;
+    }
+
+    public ConfigBuilder setFontSize(float fontSize) {
+        this.fontSize = fontSize;
+        return this;
+    }
+
+    public ConfigBuilder setDensity(float density) {
+        this.density = density;
         return this;
     }
 
@@ -83,5 +95,13 @@ public class ConfigBuilder {
 
     public BagdePosition getBagdePosition() {
         return bagdePosition;
+    }
+
+    public float getFontSize() {
+        return fontSize;
+    }
+
+    public float getDensity() {
+        return density;
     }
 }
