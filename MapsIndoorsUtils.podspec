@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
   s.test_spec 'Tests' do |test_spec|
     test_spec.ios.deployment_target = '13.0'
     test_spec.source_files = 'iOS/Tests/*.swift'
+    test_spec.resources = 'iOS/Tests/*.png'
     test_spec.ios.frameworks = ['UIKit', 'Vision']
   end  
 end

@@ -12,6 +12,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Build with Gradle
+      - name: Android Build
         working-directory: Android
         run: ./gradlew build
+      - name: iOS build, lint and Test
+        working-directory: iOS
+        run: pod lib lint
