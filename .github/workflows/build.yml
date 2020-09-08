@@ -12,8 +12,18 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: setup-xamarin
+        uses: maxim-lobanov/setup-xamarin@v1.1
+        with:
+          mono-version: 6.6 # specify version in '<major>.<minor>' format
+          xcode-version: 11.x # set the latest available Xcode 11
       - name: Android Build
         working-directory: Android
         run: ./gradlew build
       - name: iOS Build, Lint and Test
         run: pod lib lint --allow-warnings
+      - name: Xamarin build
+        run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsFat
+        run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsXamarinIOSFat
+        run: msbuild Xamarin/MapsIndoorsUtils.sln
+      
