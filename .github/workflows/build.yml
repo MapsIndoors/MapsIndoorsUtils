@@ -8,4 +8,4 @@ jobs:
         working-directory: Android
         uses: vgaidarji/android-github-actions-build@v1.0.1
         with:
-          args: "cd Android && ./gradlew build"
+          args: "./gradlew build"
