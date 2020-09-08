@@ -8,6 +8,7 @@
 
 import XCTest
 import MapsIndoorsUtils
+import UIKit
 
 class ImageBagdeTests: XCTestCase {
 

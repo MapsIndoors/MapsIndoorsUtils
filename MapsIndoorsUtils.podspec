@@ -22,8 +22,13 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/MapsIndoors/MapsIndoorsUtils.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.ios.framework = 'UIKit'
   s.ios.deployment_target = '12.0'
   s.swift_version = '4.2'
   s.source_files = 'iOS/Classes/**/*'
-  
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.ios.deployment_target = '13.0'
+    test_spec.source_files = 'iOS/Tests/*.swift'
+    test_spec.ios.frameworks = ['UIKit', 'Vision']
+  end  
 end

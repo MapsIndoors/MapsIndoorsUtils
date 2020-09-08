@@ -39,6 +39,7 @@
 		A291BA7525079889007CF904 /* default_badge_sample_2_bottomRight.png in Resources */ = {isa = PBXBuildFile; fileRef = A291BA7025079888007CF904 /* default_badge_sample_2_bottomRight.png */; };
 		A291BA7625079889007CF904 /* default_badge_sample_2_bottomLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = A291BA7125079888007CF904 /* default_badge_sample_2_bottomLeft.png */; };
 		A291BA7725079889007CF904 /* default_badge_sample_2_topLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = A291BA7225079888007CF904 /* default_badge_sample_2_topLeft.png */; };
+		A291BA792507A170007CF904 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A291BA782507A170007CF904 /* UIKit.framework */; };
 		A2B562E124F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2B562E924F8FB1400F304DA /* MPBadgedIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B562E724F8FB1400F304DA /* MPBadgedIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2B562EA24F8FB1400F304DA /* MPBadgedIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B562E824F8FB1400F304DA /* MPBadgedIcon.m */; };
@@ -64,6 +65,7 @@
 		A291BA7025079888007CF904 /* default_badge_sample_2_bottomRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_badge_sample_2_bottomRight.png; sourceTree = "<group>"; };
 		A291BA7125079888007CF904 /* default_badge_sample_2_bottomLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_badge_sample_2_bottomLeft.png; sourceTree = "<group>"; };
 		A291BA7225079888007CF904 /* default_badge_sample_2_topLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_badge_sample_2_topLeft.png; sourceTree = "<group>"; };
+		A291BA782507A170007CF904 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A2B562DD24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapsIndoorsUtilsXamarinIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B562DF24F8FA6500F304DA /* MapsIndoorsUtilsXamarinIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsIndoorsUtilsXamarinIOS.h; sourceTree = "<group>"; };
 		A2B562E024F8FA6500F304DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A291BA792507A170007CF904 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,7 @@
 		4B80E2F9714728164619896C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A291BA782507A170007CF904 /* UIKit.framework */,
 				E72950910436A38A395F0E27 /* Pods_MapsIndoorsUtils_Tests.framework */,
 			);
 			name = Frameworks;
