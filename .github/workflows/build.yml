@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: setup-xamarin
+      - name: Setup Xamarin / Mono
         uses: maxim-lobanov/setup-xamarin@v1.1
         with:
           mono-version: 6.6 # specify version in '<major>.<minor>' format
@@ -23,9 +23,9 @@ jobs:
       - name: iOS Build, Lint and Test
         run: pod lib lint --allow-warnings
       - name: Xamarin Build Fat Swift Framework
-        run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsFat
+        run: xcodebuild -workspace iOS/MapsIndoorsUtils.xcworkspace -scheme MapsIndoorsUtilsFat
       - name: Xamarin Build Fat Obj-C Framework & Bindings
-        run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsXamarinIOSFat
+        run: xcodebuild -workspace iOS/MapsIndoorsUtils.xcworkspace -scheme MapsIndoorsUtilsXamarinIOSFat
       - name: Xamarin Build Solution
         run: msbuild Xamarin/MapsIndoorsUtils.sln
       
