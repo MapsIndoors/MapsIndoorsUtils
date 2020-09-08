@@ -18,7 +18,7 @@ jobs:
           mono-version: 6.6 
           xcode-version: 11.6
       - name: Install Objective-Sharpie
-        run: brew install objectivesharpie
+        run: brew cask install objectivesharpie
       - name: Android Build
         working-directory: Android
         run: ./gradlew build
