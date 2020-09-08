@@ -1,6 +1,7 @@
 name: Build
 on: push
 jobs:
+  runs-on: macOS-latest
   build:
     steps:
       - name: "Build Android project"
