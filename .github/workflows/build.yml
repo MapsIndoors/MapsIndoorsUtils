@@ -22,8 +22,10 @@ jobs:
         run: ./gradlew build
       - name: iOS Build, Lint and Test
         run: pod lib lint --allow-warnings
-      - name: Xamarin build
+      - name: Xamarin Build Fat Swift Framework
         run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsFat
+      - name: Xamarin Build Fat Obj-C Framework & Bindings
         run: xcodebuild -workspace iOS/MapsIndoorsUtils.workspace -scheme MapsIndoorsUtilsXamarinIOSFat
+      - name: Xamarin Build Solution
         run: msbuild Xamarin/MapsIndoorsUtils.sln
       
