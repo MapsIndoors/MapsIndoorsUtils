@@ -15,5 +15,5 @@ jobs:
       - name: Android Build
         working-directory: Android
         run: ./gradlew build
-      - name: iOS build, lint and Test
-        run: pod lib lint
+      - name: iOS Build, Lint and Test
+        run: pod lib lint --allow-warnings
