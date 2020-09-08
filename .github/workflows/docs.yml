@@ -1,5 +1,5 @@
 # .github/workflows/documentation.yml
-name: Documentation
+name: iOS Swift Documentation
 
 on: [push]
 
@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Generate Documentation
+      - name: Generate Swift Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
           inputs: "MapsIndoorsUtils/Classes"

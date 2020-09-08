@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		10EEF95F3E6D5B86D6089ECB31EFF8AE /* Pods-MapsIndoorsUtils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E83FDEF38963489820EC76DB06D6D051 /* Pods-MapsIndoorsUtils_Tests-dummy.m */; };
 		5C5404FF2C9EC5B5D024EBAF81120473 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		77BE61CB5ABD7157B52514B16E8CEF2A /* MapsIndoorsUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F57481E802D3B31028F089393502E /* MapsIndoorsUtils-dummy.m */; };
-		A2BD6A1E24EC0A0B00AA1757 /* BadgedIconConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A343FE33B6CA9DCAC44B7BEC86161C5 /* BadgedIconConfiguration.swift */; };
-		A2BD6A1F24EC0A0B00AA1757 /* BagdedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46906FFC7BED7388ED6AA374C71A50A6 /* BagdedIcon.swift */; };
+		77BE61CB5ABD7157B52514B16E8CEF2A /* MapsIndoorsUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE0203EA5D96232D98F6D04C5697DB1 /* MapsIndoorsUtils-dummy.m */; };
+		95B19575A8C28BEABB9D9A7C64D31C45 /* BagdedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0D46E1B07A95D84A75EFAC06C9B9 /* BagdedIcon.swift */; };
 		C0B88534CE119D81F976CBFE6049DF4A /* Pods-MapsIndoorsUtils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00294EB0B382693ED26713A43E1F6104 /* Pods-MapsIndoorsUtils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4478F7FBFC7E88838998F77D72A9875 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E89559116F7CBE175A13EC1E518866A6 /* MapsIndoorsUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B864FFEF6C92E25BC4E5BDECE177BB /* MapsIndoorsUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89559116F7CBE175A13EC1E518866A6 /* MapsIndoorsUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A7A7B50CE70FEFBFA6EC26B09EE54E /* MapsIndoorsUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5D6E5C5123397A669FDA4D95CAA57A1 /* BadgedIconConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F3DEFAE268BFDC86E1B8212B107E1 /* BadgedIconConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,29 +29,29 @@
 
 /* Begin PBXFileReference section */
 		00294EB0B382693ED26713A43E1F6104 /* Pods-MapsIndoorsUtils_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapsIndoorsUtils_Tests-umbrella.h"; sourceTree = "<group>"; };
-		048385116C31E38C53CB05284501A511 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		08D29C0CB566411A1F30D4C0B46E0274 /* MapsIndoorsUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapsIndoorsUtils-prefix.pch"; sourceTree = "<group>"; };
-		1A343FE33B6CA9DCAC44B7BEC86161C5 /* BadgedIconConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BadgedIconConfiguration.swift; path = MapsIndoorsUtils/Classes/BadgedIconConfiguration.swift; sourceTree = "<group>"; };
+		1DE6D1EE65CDB4BCAE0A054527FCBB19 /* MapsIndoorsUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapsIndoorsUtils.modulemap; sourceTree = "<group>"; };
 		1ECB73EBC458886A5484063C4ECC628D /* Pods-MapsIndoorsUtils_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapsIndoorsUtils_Tests-Info.plist"; sourceTree = "<group>"; };
+		239A0D46E1B07A95D84A75EFAC06C9B9 /* BagdedIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagdedIcon.swift; path = iOS/Classes/BagdedIcon.swift; sourceTree = "<group>"; };
 		2F69F4BDCC1902181856327083893AF8 /* Pods-MapsIndoorsUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapsIndoorsUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46906FFC7BED7388ED6AA374C71A50A6 /* BagdedIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagdedIcon.swift; path = MapsIndoorsUtils/Classes/BagdedIcon.swift; sourceTree = "<group>"; };
-		52B864FFEF6C92E25BC4E5BDECE177BB /* MapsIndoorsUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapsIndoorsUtils-umbrella.h"; sourceTree = "<group>"; };
 		531B4BB9969358357967232EC1BAD2B8 /* Pods-MapsIndoorsUtils_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapsIndoorsUtils_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		535F54141E65E72215B12790CC71F25C /* Pods-MapsIndoorsUtils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MapsIndoorsUtils_Tests.modulemap"; sourceTree = "<group>"; };
 		54EF0C222EFFEE25CC6BA78B19B75B0C /* Pods-MapsIndoorsUtils_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapsIndoorsUtils_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		5BF0A15048BC695A638F7B2C82441E38 /* MapsIndoorsUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapsIndoorsUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		682EBBDD9D06FE3683AE41909474EE25 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		847F57481E802D3B31028F089393502E /* MapsIndoorsUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapsIndoorsUtils-dummy.m"; sourceTree = "<group>"; };
-		9D34A991C12B641E96DE997D29FB82D3 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MapsIndoorsUtils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A68CAA78FBA69BE69C48B6CF17111D57 /* MapsIndoorsUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapsIndoorsUtils.xcconfig; sourceTree = "<group>"; };
+		5BF0A15048BC695A638F7B2C82441E38 /* MapsIndoorsUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapsIndoorsUtils.framework; path = MapsIndoorsUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74864C318D4D77953F0B47E54E0670CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B13AC275D33D47EA49CD01AB43AEE29E /* Pods-MapsIndoorsUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapsIndoorsUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B57B355549C67A25A97BA6335301632C /* Pods_MapsIndoorsUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD05557FBF429D9B78C4116930F429D9 /* MapsIndoorsUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapsIndoorsUtils.modulemap; sourceTree = "<group>"; };
+		B2A7A7B50CE70FEFBFA6EC26B09EE54E /* MapsIndoorsUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapsIndoorsUtils-umbrella.h"; sourceTree = "<group>"; };
+		B57B355549C67A25A97BA6335301632C /* Pods_MapsIndoorsUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MapsIndoorsUtils_Tests.framework; path = "Pods-MapsIndoorsUtils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EAAA4F7AB72F3E4A74D60210B7AAE1 /* MapsIndoorsUtils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MapsIndoorsUtils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5FB4728ACBFAD5CAA991FD1A898DBB0 /* MapsIndoorsUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapsIndoorsUtils-Info.plist"; sourceTree = "<group>"; };
+		CE1F3DEFAE268BFDC86E1B8212B107E1 /* BadgedIconConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BadgedIconConfiguration.swift; path = iOS/Classes/BadgedIconConfiguration.swift; sourceTree = "<group>"; };
+		E432AA222DDD5C13728B96A48CA7D0DD /* MapsIndoorsUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapsIndoorsUtils-prefix.pch"; sourceTree = "<group>"; };
 		E83FDEF38963489820EC76DB06D6D051 /* Pods-MapsIndoorsUtils_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapsIndoorsUtils_Tests-dummy.m"; sourceTree = "<group>"; };
+		EED73835071EC589CB0C4C616323203E /* MapsIndoorsUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapsIndoorsUtils.xcconfig; sourceTree = "<group>"; };
+		F863A3BE192EB962B82952CA66D51211 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FAB82A16D4615BDC5E8E9F0C18C2E5E8 /* Pods-MapsIndoorsUtils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MapsIndoorsUtils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FDD3A90CD060B2FC25014797B9B6761A /* MapsIndoorsUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapsIndoorsUtils-Info.plist"; sourceTree = "<group>"; };
+		FBE0203EA5D96232D98F6D04C5697DB1 /* MapsIndoorsUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapsIndoorsUtils-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,16 +82,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5FDF1BE7E59F58774211F2464325006A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				682EBBDD9D06FE3683AE41909474EE25 /* LICENSE */,
-				9D34A991C12B641E96DE997D29FB82D3 /* MapsIndoorsUtils.podspec */,
-				048385116C31E38C53CB05284501A511 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		95064AD781044603EE81FCB7C9DAB2CC /* Pods-MapsIndoorsUtils_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +99,18 @@
 			path = "Target Support Files/Pods-MapsIndoorsUtils_Tests";
 			sourceTree = "<group>";
 		};
+		983911D419E044E8AC378E39C0537EEC /* MapsIndoorsUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F3DEFAE268BFDC86E1B8212B107E1 /* BadgedIconConfiguration.swift */,
+				239A0D46E1B07A95D84A75EFAC06C9B9 /* BagdedIcon.swift */,
+				C24F9682322D0B3703368C891407247A /* Pod */,
+				EECA7F496514DCFDDE09CD969AC284F1 /* Support Files */,
+			);
+			name = MapsIndoorsUtils;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,22 +119,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C0B67861A1C0FE05390EDA3CCF21192F /* MapsIndoorsUtils */ = {
+		C24F9682322D0B3703368C891407247A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1A343FE33B6CA9DCAC44B7BEC86161C5 /* BadgedIconConfiguration.swift */,
-				46906FFC7BED7388ED6AA374C71A50A6 /* BagdedIcon.swift */,
-				5FDF1BE7E59F58774211F2464325006A /* Pod */,
-				D6F2FC079EF4A0655DD10DB1A4F0F233 /* Support Files */,
+				74864C318D4D77953F0B47E54E0670CE /* LICENSE */,
+				C0EAAA4F7AB72F3E4A74D60210B7AAE1 /* MapsIndoorsUtils.podspec */,
+				F863A3BE192EB962B82952CA66D51211 /* README.md */,
 			);
-			name = MapsIndoorsUtils;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CA7961F13B97527ACFCCA37EE2B11B78 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0B67861A1C0FE05390EDA3CCF21192F /* MapsIndoorsUtils */,
+				983911D419E044E8AC378E39C0537EEC /* MapsIndoorsUtils */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -156,18 +156,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D6F2FC079EF4A0655DD10DB1A4F0F233 /* Support Files */ = {
+		EECA7F496514DCFDDE09CD969AC284F1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD05557FBF429D9B78C4116930F429D9 /* MapsIndoorsUtils.modulemap */,
-				A68CAA78FBA69BE69C48B6CF17111D57 /* MapsIndoorsUtils.xcconfig */,
-				847F57481E802D3B31028F089393502E /* MapsIndoorsUtils-dummy.m */,
-				FDD3A90CD060B2FC25014797B9B6761A /* MapsIndoorsUtils-Info.plist */,
-				08D29C0CB566411A1F30D4C0B46E0274 /* MapsIndoorsUtils-prefix.pch */,
-				52B864FFEF6C92E25BC4E5BDECE177BB /* MapsIndoorsUtils-umbrella.h */,
+				1DE6D1EE65CDB4BCAE0A054527FCBB19 /* MapsIndoorsUtils.modulemap */,
+				EED73835071EC589CB0C4C616323203E /* MapsIndoorsUtils.xcconfig */,
+				FBE0203EA5D96232D98F6D04C5697DB1 /* MapsIndoorsUtils-dummy.m */,
+				C5FB4728ACBFAD5CAA991FD1A898DBB0 /* MapsIndoorsUtils-Info.plist */,
+				E432AA222DDD5C13728B96A48CA7D0DD /* MapsIndoorsUtils-prefix.pch */,
+				B2A7A7B50CE70FEFBFA6EC26B09EE54E /* MapsIndoorsUtils-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MapsIndoorsUtils";
+			path = "iOS/Pods/Target Support Files/MapsIndoorsUtils";
 			sourceTree = "<group>";
 		};
 		F68897F2C51C0ADBF85F99AA348855C2 /* Products */ = {
@@ -288,8 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2BD6A1F24EC0A0B00AA1757 /* BagdedIcon.swift in Sources */,
-				A2BD6A1E24EC0A0B00AA1757 /* BadgedIconConfiguration.swift in Sources */,
+				F5D6E5C5123397A669FDA4D95CAA57A1 /* BadgedIconConfiguration.swift in Sources */,
+				95B19575A8C28BEABB9D9A7C64D31C45 /* BagdedIcon.swift in Sources */,
 				77BE61CB5ABD7157B52514B16E8CEF2A /* MapsIndoorsUtils-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,9 +314,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6346FB204E2CB0585499318435EBE37B /* Debug */ = {
+		2F7B328D63DD19EAB48CD9A32F0B139E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A68CAA78FBA69BE69C48B6CF17111D57 /* MapsIndoorsUtils.xcconfig */;
+			baseConfigurationReference = EED73835071EC589CB0C4C616323203E /* MapsIndoorsUtils.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -331,39 +331,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils.modulemap";
-				PRODUCT_MODULE_NAME = MapsIndoorsUtils;
-				PRODUCT_NAME = MapsIndoorsUtils;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7AA0F17F84135EBBE4DF21976FC7B3C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A68CAA78FBA69BE69C48B6CF17111D57 /* MapsIndoorsUtils.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils.modulemap";
 				PRODUCT_MODULE_NAME = MapsIndoorsUtils;
@@ -465,7 +433,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -569,6 +538,38 @@
 			};
 			name = Release;
 		};
+		E2474F6DB9142AC8F35D14E2F52381D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED73835071EC589CB0C4C616323203E /* MapsIndoorsUtils.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MapsIndoorsUtils/MapsIndoorsUtils.modulemap";
+				PRODUCT_MODULE_NAME = MapsIndoorsUtils;
+				PRODUCT_NAME = MapsIndoorsUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,8 +585,8 @@
 		85FABF2FAAEBC1BB5EB6359F6C363E42 /* Build configuration list for PBXNativeTarget "MapsIndoorsUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6346FB204E2CB0585499318435EBE37B /* Debug */,
-				7AA0F17F84135EBBE4DF21976FC7B3C6 /* Release */,
+				E2474F6DB9142AC8F35D14E2F52381D1 /* Debug */,
+				2F7B328D63DD19EAB48CD9A32F0B139E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
