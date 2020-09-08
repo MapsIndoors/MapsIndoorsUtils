@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Build Android project"
-        working-directory: Android
         uses: vgaidarji/android-github-actions-build@v1.0.1
+        working-directory: Android
         with:
           args: "./gradlew build"
+          

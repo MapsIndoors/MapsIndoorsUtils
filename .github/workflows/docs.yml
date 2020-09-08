@@ -1,7 +1,10 @@
 # .github/workflows/documentation.yml
 name: iOS Swift Documentation
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
