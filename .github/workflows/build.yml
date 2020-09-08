@@ -16,5 +16,4 @@ jobs:
         working-directory: Android
         run: ./gradlew build
       - name: iOS build, lint and Test
-        working-directory: iOS
         run: pod lib lint
