@@ -1,0 +1,16 @@
+PODS:
+  - MapsIndoorsUtils (0.1.0-alpha2)
+
+DEPENDENCIES:
+  - MapsIndoorsUtils (from `../`)
+
+EXTERNAL SOURCES:
+  MapsIndoorsUtils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MapsIndoorsUtils: 3f7826d9232588033ad1529a7bc29d12b2b3519f
+
+PODFILE CHECKSUM: a9a921ecb0a0df2fef8dae052094e5e1a5a7e3bc
+
+COCOAPODS: 1.8.4

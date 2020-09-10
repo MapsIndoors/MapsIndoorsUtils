@@ -41,11 +41,11 @@
     <ObjcBindingCoreSource Include="Structs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\Example\build\MapsIndoorsUtilsXamarinIOS.framework">
+    <NativeReference Include="..\..\iOS\build\MapsIndoorsUtilsXamarinIOS.framework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>
-    <NativeReference Include="..\..\Example\build\MapsIndoorsUtils.framework">
+    <NativeReference Include="..\..\iOS\build\MapsIndoorsUtils.framework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>

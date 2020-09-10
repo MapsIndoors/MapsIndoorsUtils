@@ -1,0 +1,3 @@
+include ':mapsindoorsutils'
+include ':app'
+rootProject.name = "MapsIndoors Utils"

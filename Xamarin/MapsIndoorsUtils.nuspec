@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>MapsIndoorsUtils</id>
+        <version>0.1.0-beta1</version>
+        <authors>MapsPeople A/S</authors>
+        <owners>MapsPeople A/S</owners>
+        <projectUrl>https://mapsindoors.github.io</projectUrl>
+        <iconUrl>https://mapsindoors.github.io/assets/favicon.ico</iconUrl>
+        <license type="expression">MIT</license>
+        <icon>images\mapsindoors_icon.jpg</icon>
+        <title>MapsIndoors SDK Utils</title>
+        <description>
+This software is currently beta and is subject to change without notice.
+
+In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point.
+
+Currently, the only utility is a rendering helper for placing a badge on an icon image. The result is a larger image with both the original image graphics and the badge placed on top of the image.
+</description>
+        <releaseNotes>
+        
+        </releaseNotes>
+        <copyright>Copyright 2020 MapsPeople A/S</copyright>
+        <tags>mapspeople mapsindoors indoor indoornavigation indoorpositioning positioning navigation maps googlemaps</tags>
+    
+        <dependencies>
+            <!-- <group targetFramework="MonoAndroid5.0">
+            </group> -->
+            <group targetFramework="Xamarin.iOS1.0">
+            </group>
+        </dependencies>
+
+    </metadata>
+
+    <files>
+        <!-- iOS reference assemblies -->
+        <file src="MapsIndoorsUtils/bin/Release/MapsIndoorsUtils.dll" target="lib\Xamarin.iOS1.0\MapsIndoorsIos.dll" />
+
+        <!-- Android reference assemblies -->
+        <!-- <file src="MapsPeople.Android.Binding\bin\Release\MapsIndoorsAndroid.dll" target="lib\MonoAndroid5.0\MapsIndoorsAndroid.dll" /> -->
+
+        <file src="../mapsindoors_icon.jpg" target="images\" />
+    </files>
+</package>

@@ -21,7 +21,7 @@ MapsIndoorsUtils is available as a [CocoaPods](https://cocoapods.org) pod. To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MapsIndoorsUtils', git: => 'https://github.com/MapsIndoors/MapsIndoorsUtilsIOS.git'
+pod 'MapsIndoorsUtils', '0.1.0-alpha6'
 ```
 
 ## Authors

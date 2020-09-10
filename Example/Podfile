@@ -1,6 +1,0 @@
-use_frameworks!
-target 'MapsIndoorsUtils_Tests' do
-  pod 'MapsIndoorsUtils', :path => '../'
-  
-  
-end
