@@ -24,7 +24,7 @@ jobs:
           - name: Print the final result
             run: |
               ls
-              cd app/build/outputs/aar
+              cd mapsindoorsutils/build/outputs/aar
               ls
               cd ../..
               cd publications/release
