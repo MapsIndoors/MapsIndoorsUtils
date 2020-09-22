@@ -23,7 +23,8 @@ jobs:
             run: bash ./gradlew publishToMavenLocal
           - name: Print the final result
             run: |
-              bash cd mapsindoorsutils/build/outputs/aar
+              bash ls
+              bash cd app/build/outputs/aar
               bash ls
               bash cd ../..
               bash cd publications/release
