@@ -2,10 +2,6 @@ name: deploy to maven
 
 on: [workflow_dispatch]
 
-defaults:
-    run:
-      working-directory: Android
-
 jobs:
     build:
       name: create AAR
