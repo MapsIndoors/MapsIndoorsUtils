@@ -24,10 +24,10 @@ jobs:
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: ./puts3.sh -/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/ -/mapsindoorsutils/build/outputs/aar/mapsindoorsutils-release.aar -$s3key - $s3secret
+            run: ./puts3.sh -"/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/" -"/mapsindoorsutils/build/outputs/aar/mapsindoorsutils-release.aar" -"$s3key" -"$s3secret"
           - name: upload aar to aws
             working-directory: scripts
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: ./puts3.sh -/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/ -/mapsindoorsutils/build/publications/release/pom-default.xml -$s3key - $s3secret
+            run: ./puts3.sh -/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/ -/mapsindoorsutils/build/publications/release/pom-default.xml -$s3key -$s3secret
