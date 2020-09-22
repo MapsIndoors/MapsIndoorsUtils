@@ -14,8 +14,10 @@ jobs:
             with: 
               java-version: 8
           - name: build release AAR
+            working-directory: android
             run: bash ./gradlew assemblerelease
           - name: build poms
+            working-directory: android
             run: bash ./gradlew publishToMavenLocal
           - name: upload aar to aws
             env: 
