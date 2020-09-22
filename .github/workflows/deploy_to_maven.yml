@@ -1,9 +1,6 @@
 name: deploy to maven
 
-on: 
-  push:
-      tags: 
-        - '*'
+on: [workflow_dispatch]
 
 defaults:
     run:
