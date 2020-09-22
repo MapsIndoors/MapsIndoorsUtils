@@ -21,7 +21,7 @@ function putS3
   signature=$(echo -en "${string}" | openssl sha1 -hmac "${S3SECRET}" -binary | base64)
   
   echo "Transferring $path/$file to https://$bucket.s3.amazonaws.com$aws_path$file"
-  curl -X PUT -T "$path/$file" \
+  curl -v -X PUT -T "$path/$file" \
     -H "Host: $bucket.s3.amazonaws.com" \
     -H "Date: $date" \
     -H "Content-Type: $content_type" \
