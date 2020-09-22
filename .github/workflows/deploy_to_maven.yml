@@ -1,0 +1,33 @@
+name: deploy to maven
+
+on: 
+  push:
+      tags: 
+        - '*'
+
+defaults:
+    run:
+      working-directory: Android
+
+jobs:
+    build:
+      name: create AAR
+      runs-on: ubuntu-latest
+
+      steps:
+          - uses: actions/checkout@v1
+          - name: setup JDK
+            uses: actions/setup-java@1
+            with: 
+              java-version: 8
+          - name: build release AAR
+            run: bash ./gradlew assemblerelease
+          - name: build poms
+            run: bash ./gradlew publishToMavenLocal
+          - name: Print the final result
+            run: |
+              bash cd mapsindoorsutils/build/outputs/aar
+              bash ls
+              bash cd ../..
+              bash cd publications/release
+              bash ls
