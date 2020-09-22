@@ -1,5 +1,4 @@
-function putS3
-{
+
   echo "_____________________________________________________________________________"
 
   path=$1
@@ -29,4 +28,4 @@ function putS3
     -H "$acl" \
     -H "Authorization: AWS ${S3KEY}:$signature" \
     "https://$bucket.s3.amazonaws.com$aws_path$file"
-}
+
