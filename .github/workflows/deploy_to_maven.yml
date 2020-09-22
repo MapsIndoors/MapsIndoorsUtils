@@ -21,11 +21,13 @@ jobs:
             run: bash ./gradlew assemblerelease
           - name: build poms
             run: bash ./gradlew publishToMavenLocal
-          - name: Print the final result
-            run: |
-              ls
-              cd mapsindoorsutils/build/outputs/aar
-              ls
-              cd ../..
-              cd publications/release
-              ls
+          - name: upload aar to aws
+            env: 
+              s3key: ${{ secrets.AWS_KEY }}
+              s3secret: ${{ secrets.AWS_SECRET }}
+            run: ./scripts.puts3.sh -/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/ -/mapsindoorsutils/build/outputs/aar/mapsindoorsutils-release.aar -$s3key - $s3secret
+          - name: upload aar to aws
+            env: 
+              s3key: ${{ secrets.AWS_KEY }}
+              s3secret: ${{ secrets.AWS_SECRET }}
+            run: ./scripts.puts3.sh -/com/mapspeople/mapsindoors/mapsindoorsutils/0.1.0/ -/mapsindoorsutils/build/publications/release/pom-default.xml -$s3key - $s3secret
