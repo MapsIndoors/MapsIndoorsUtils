@@ -44,6 +44,7 @@ dependencies {
 task setTag {
     doFirst {
         mVersionName = myTag
+        project.logger.lifecycle("mVersionName is = " + mVersionName + "& myTag is = " + myTag)
     }
 }
 
