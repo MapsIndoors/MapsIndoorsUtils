@@ -59,7 +59,7 @@ def renameFiles() {
             include('pom-default.xml')
             rename('pom-default.xml', "mapsindoorsutils-" + mVersionName + ".xml")
         }
-        into('sdkreleases')
+        into('build/outputs/sdkrelease')
     }
 }
 
