@@ -49,14 +49,17 @@ task setTag {
 
 
 def renameFiles() {
-    from('build/outputs/aar'){
-        include('mapsindoorsutils-release.aar')
-        rename('mapsindoorsutils-release.aar', "mapsindoorsutils-"+ tag + ".aar")
-    }
+    copy {
+        from('build/outputs/aar'){
+            include('mapsindoorsutils-release.aar')
+            rename('mapsindoorsutils-release.aar', "mapsindoorsutils-"+ mVersionName + ".aar")
+        }
 
-    from('builds/publications/release') {
-        include('pom-default.xml')
-        rename('pom-default.xml', "mapsindoorsutils-" + tag + ".xml")
+        from('build/publications/release') {
+            include('pom-default.xml')
+            rename('pom-default.xml', "mapsindoorsutils-" + mVersionName + ".xml")
+        }
+        into('build/sdkreleases')
     }
 }
 
@@ -104,4 +107,5 @@ afterEvaluate {
             }
         }
     }
+    renameFiles()
 }

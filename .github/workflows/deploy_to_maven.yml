@@ -28,9 +28,9 @@ jobs:
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/outputs/aar/mapsindoorsutils-$THIS_TAG.aar" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/javascript"
+            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/sdkreleases/mapsindoorsutils-$THIS_TAG.aar" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/javascript"
           - name: upload pom to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/publications/release/mapsindoorsutils-$THIS_TAG.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/xml"
+            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/sdkreleases/mapsindoorsutils-$THIS_TAG.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/xml"
