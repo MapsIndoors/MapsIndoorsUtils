@@ -20,7 +20,7 @@ jobs:
             working-directory: Android
             run: bash ./gradlew publishToMavenLocal
           - name: set tag
-            run: echo '::set-env name=THIS_TAG::$(echo git describe --tags `git rev-list --tags --max-count=1`)'
+            run: echo ::set-env name=THIS_TAG::$(echo git describe --tags `git rev-list --tags --max-count=1`)
           - name: upload aar to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
