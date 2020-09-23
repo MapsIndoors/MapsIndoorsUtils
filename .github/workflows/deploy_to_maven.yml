@@ -23,7 +23,10 @@ jobs:
             run: bash ./gradlew assemblerelease
           - name: build poms
             working-directory: Android
-            run: bash ./gradlew publishToMavenLocal
+            run: |
+              bash ./gradlew setTag -PmyTag=$THIS_TAG
+              bash ./gradlew publishToMavenLocal
+              bash ./gradlew setTag -PmyTag=$THIS_TAG
           - name: Sleep for 30 seconds
             uses: jakejarvis/wait-action@master
             with:
