@@ -24,15 +24,20 @@ jobs:
           - name: build poms
             working-directory: Android
             run: bash ./gradlew publishToMavenLocal
+          - name: Sleep for 30 seconds
+            uses: jakejarvis/wait-action@master
+            with:
+              time: '30s'
+          - name: sanity check
+            working-directory: Android
+            run: |
+              cd mapsindoorsutils/build/outputs/aar
+              ls
           - name: upload aar to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
             run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/outputs/aar/mapsindoorsutils-$THIS_TAG.aar" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/javascript"
-          - name: Sleep for 30 seconds
-            uses: jakejarvis/wait-action@master
-            with:
-              time: '30s'
           - name: upload pom to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
