@@ -58,6 +58,7 @@ gradle.taskGraph.beforeTask {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
+                from components.release
                 // You can then customize attributes of the publication as shown below.
                 pom {
                     name = "mapsindoorsutils"
