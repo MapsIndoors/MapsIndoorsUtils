@@ -113,7 +113,7 @@ def renameFiles() {
 
         from('build/publications/release') {
             include('pom-default.xml')
-            rename('pom-default.xml', "mapsindoorsutils-" + mVersionName + ".xml")
+            rename('pom-default.xml', "mapsindoorsutils-" + mVersionName + ".pom")
         }
         into('build/outputs/aar')
     }
