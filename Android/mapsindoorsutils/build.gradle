@@ -46,6 +46,9 @@ task setTag {
         mVersionName = myTag
         project.logger.lifecycle("mVersionName is = " + mVersionName + "& myTag is = " + myTag)
     }
+    doLast {
+        renameFiles()
+    }
 }
 
 
