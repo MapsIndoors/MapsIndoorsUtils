@@ -41,8 +41,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
-task setTag {
+
+task createPOM {
     doFirst {
+        mVersionName = myTag
+    }
+    doLast {
         publishing {
             publications {
                 // Creates a Maven publication called "release".
@@ -87,9 +91,14 @@ task setTag {
             }
         }
     }
-    doLast {
+}
+
+task setTag {
+    doFirst {
         mVersionName = myTag
         project.logger.lifecycle("mVersionName is = " + mVersionName + "& myTag is = " + myTag)
+    }
+    doLast {
         renameFiles()
     }
 }
