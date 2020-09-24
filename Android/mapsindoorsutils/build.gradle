@@ -53,14 +53,15 @@ task setTag {
     }
 }
 
-gradle.taskGraph.beforeTask {
+afterEvaluate {
     publishing {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
+                // You can then customize attributes of the publication as shown below
                 from components.release
-                // You can then customize attributes of the publication as shown below.
                 pom {
+
                     name = "mapsindoorsutils"
                     description = "In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point."
                     url = "https://github.com/MapsIndoors/MapsIndoorsUtils"
