@@ -57,55 +57,52 @@ task setTag {
     }
 }
 
-gradle.taskGraph.afterTask {
+
+publishing {
     if (project.hasProperty("myTag")) {
-        mVersionName = project.properties.get("myTag")
-        publishing {
-            publications {
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
-                    // You can then customize attributes of the publication as shown below
-                    pom {
+        mVersionName = myTag
+    }
+    publications {
+        // Creates a Maven publication called "release".
+        release(MavenPublication) {
+            // You can then customize attributes of the publication as shown below
+            pom {
 
-                        name = "mapsindoorsutils"
-                        description = "In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point."
-                        url = "https://github.com/MapsIndoors/MapsIndoorsUtils"
-                        licenses {
-                            license {
-                                name = "The Apache License, Version 2.0"
-                                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                            }
-                        }
-                        developers {
-                            developer {
-                                id = "mapspeople"
-                                name = "MapsPeople"
-                                email = "mail@mapspeople.com"
-                            }
-                        }
-                        scm {
-                            connection = "scm:git:git://github.com/mapsindoors/mapsindoorsutils.git"
-                            developerConnection = "scm:git:ssh://github.com:mapsindoors/mapsindoorsutils.git"
-                            url = "http://github.com/mapsindoors/mapsindoorsutils/android"
-                        }
+                name = "mapsindoorsutils"
+                description = "In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point."
+                url = "https://github.com/MapsIndoors/MapsIndoorsUtils"
+                licenses {
+                    license {
+                        name = "The Apache License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
                     }
-                    groupId = 'com.mapspeople.mapsindoors'
-                    artifactId = 'mapsindoorsutils'
-                    version = mVersionName
                 }
-                // Creates a Maven publication called “debug”.
-                debug(MavenPublication) {
-
-                    groupId = 'com.mapspeople.mapsindoors'
-                    artifactId = 'mapsindoorsutils-debug'
-                    version = mVersionName
+                developers {
+                    developer {
+                        id = "mapspeople"
+                        name = "MapsPeople"
+                        email = "mail@mapspeople.com"
+                    }
+                }
+                scm {
+                    connection = "scm:git:git://github.com/mapsindoors/mapsindoorsutils.git"
+                    developerConnection = "scm:git:ssh://github.com:mapsindoors/mapsindoorsutils.git"
+                    url = "http://github.com/mapsindoors/mapsindoorsutils/android"
                 }
             }
+            groupId = 'com.mapspeople.mapsindoors'
+            artifactId = 'mapsindoorsutils'
+            version = mVersionName
+        }
+        // Creates a Maven publication called “debug”.
+        debug(MavenPublication) {
+
+            groupId = 'com.mapspeople.mapsindoors'
+            artifactId = 'mapsindoorsutils-debug'
+            version = mVersionName
         }
     }
 }
-
-
 
 def renameFiles() {
     copy {
