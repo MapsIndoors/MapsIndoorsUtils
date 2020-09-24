@@ -21,11 +21,6 @@ jobs:
               bash ./gradlew assemblerelease
               bash ./gradlew publishToMavenLocal -PmyTag=$THIS_TAG
               bash ./gradlew setTag -PmyTag=$THIS_TAG
-          - name: sanity check
-            working-directory: Android
-            run: |
-              cd mapsindoorsutils/build/outputs/aar
-              ls
           - name: upload aar to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
