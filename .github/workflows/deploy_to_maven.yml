@@ -15,15 +15,10 @@ jobs:
               java-version: 8
           - name: set tag
             run: echo ::set-env name=THIS_TAG::$(echo $(git describe --tags `git rev-list --tags --max-count=1`))
-          - name: set versionName
-            working-directory: Android
-            run: bash ./gradlew setTag -PmyTag=$THIS_TAG
           - name: build
             working-directory: Android
             run: |
-              bash ./gradlew setTag -PmyTag=$THIS_TAG
               bash ./gradlew assemblerelease
-              bash ./gradlew setTag -PmyTag=$THIS_TAG
               bash ./gradlew publishToMavenLocal
               bash ./gradlew setTag -PmyTag=$THIS_TAG
           - name: Sleep for 30 seconds
