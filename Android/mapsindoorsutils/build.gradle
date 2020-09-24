@@ -89,10 +89,10 @@ tasks.whenTaskAdded {
                         developerConnection = "scm:git:ssh://github.com:mapsindoors/mapsindoorsutils.git"
                         url = "http://github.com/mapsindoors/mapsindoorsutils/android"
                     }
+                    groupId = 'com.mapspeople.mapsindoors'
+                    artifactId = 'mapsindoorsutils'
+                    version = mVersionName
                 }
-                groupId = 'com.mapspeople.mapsindoors'
-                artifactId = 'mapsindoorsutils'
-                version = mVersionName
             }
             // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
