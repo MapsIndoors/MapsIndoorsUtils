@@ -6,6 +6,10 @@ ext{
     mVersionName = "0.1.0"
 }
 
+beforeEvaluate {
+    print project.properties.toString()
+}
+
 android {
     compileSdkVersion 27
     buildToolsVersion "29.0.3"
@@ -53,13 +57,15 @@ task setTag {
     }
 }
 
-afterEvaluate {
+tasks.whenTaskAdded {
+    if (project.hasProperty("myTag")) {
+        mVersionName = project.properties.get("myTag")
+    }
     publishing {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 // You can then customize attributes of the publication as shown below
-                from components.release
                 pom {
 
                     name = "mapsindoorsutils"

@@ -18,7 +18,7 @@ jobs:
           - name: build
             working-directory: Android
             run: |
-              bash ./gradlew assemblerelease
+              bash ./gradlew assemblerelease -PmyTag=$THIS_TAG
               bash ./gradlew setTag -PmyTag=$THIS_TAG
               bash ./gradlew publishToMavenLocal
               bash ./gradlew setTag -PmyTag=$THIS_TAG
