@@ -20,7 +20,7 @@ jobs:
             run: |
               bash ./gradlew assemblerelease
               bash ./gradlew publishToMavenLocal -PmyTag=$THIS_TAG
-              bash ./gradlew downloadAndConfigureMavenMetaData -P myTag=$THIS_TAG
+              bash ./gradlew downloadAndConfigureMavenMetaData -PmyTag=$THIS_TAG
               bash ./gradlew setTag -PmyTag=$THIS_TAG
           - name: upload aar to aws
             env: 
