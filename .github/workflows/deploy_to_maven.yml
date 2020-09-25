@@ -20,6 +20,7 @@ jobs:
             run: |
               bash ./gradlew assemblerelease
               bash ./gradlew publishToMavenLocal -PmyTag=$THIS_TAG
+              bash ./gradlew downloadAndConfigureMavenMetaData -P myTag=$THIS_TAG
               bash ./gradlew setTag -PmyTag=$THIS_TAG
           - name: upload aar to aws
             env: 
@@ -35,4 +36,4 @@ jobs:
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/tmp/publishReleasePublicationToMavenLocal/module-maven-metadata.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/$THIS_TAG/" "public-read" "application/xml"
+            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/maven-metadata.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/" "public-read" "application/xml"
