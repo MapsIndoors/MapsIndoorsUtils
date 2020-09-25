@@ -22,10 +22,6 @@ jobs:
               bash ./gradlew publishToMavenLocal -PmyTag=$THIS_TAG
               bash ./gradlew downloadAndConfigureMavenMetaData -PmyTag=$THIS_TAG
               bash ./gradlew setTag -PmyTag=$THIS_TAG
-          - name: Sleep for 30 seconds
-            uses: jakejarvis/wait-action@master
-            with:
-              time: '30s'
           - name: upload aar to aws
             env: 
               s3key: ${{ secrets.AWS_KEY }}
@@ -40,4 +36,4 @@ jobs:
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/maven-metadata.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/" "public-read" "application/xml"
+            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/mapsindoorsutils/build/tmp/maven-metadata.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/" "public-read" "application/xml"
