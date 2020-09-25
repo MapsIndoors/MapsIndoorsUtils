@@ -106,12 +106,13 @@ task downloadAndConfigureMavenMetaData {
                 }
             }
             println(xmlFile.getText())
-            xmlFile.withWriter {
+            new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile))).print(metadata)
+            /*xmlFile.withWriter {
                 def printer = new XmlNodePrinter(new PrintWriter(it))
                 printer.preserveWhitespace = true
                 printer.print(metadata)
                 println("printed")
-            }
+            }*/
         }
     }
 }
