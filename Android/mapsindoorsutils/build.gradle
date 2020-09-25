@@ -65,8 +65,7 @@ task downloadAndConfigureMavenMetaData {
         def getResponse = get.getResponseCode()
         println(getResponse)
         if (getResponse.equals(200)) {
-            File xmlFile = file('maven-metadata.xml')
-            xmlFile.setText("")
+            File xmlFile = new File("$buildDir/tmp/maven-metadata.xml")
             xmlFile.append(get.inputStream)
             def metadata = new XmlParser().parse(xmlFile)
 
@@ -106,13 +105,12 @@ task downloadAndConfigureMavenMetaData {
                 }
             }
             println(xmlFile.getText())
-            new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile))).print(metadata)
-            /*xmlFile.withWriter {
+            xmlFile.withWriter {
                 def printer = new XmlNodePrinter(new PrintWriter(it))
                 printer.preserveWhitespace = true
                 printer.print(metadata)
                 println("printed")
-            }*/
+            }
         }
     }
 }
