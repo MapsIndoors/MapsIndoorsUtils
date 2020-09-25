@@ -75,31 +75,32 @@ task downloadAndConfigureMavenMetaData {
             metadata.each {
                 if (it.name().equals("version")) {
                     println(it.value())
-                    println(myTag)
                     it.setValue(myTag)
+                    println(it.value())
                 }
                 if (it.name().equals("versioning")) {
                     it.each {
                         if (it.name().equals("latest")) {
                             println(it.value())
-                            println(myTag)
                             it.setValue(myTag)
+                            println(it.value())
                         }
                         if (it.name().equals("release")) {
                             println(it.value())
-                            println(myTag)
                             it.setValue(myTag)
+                            println(it.value())
                         }
                         if (it.name().equals("versions")) {
                             println(it.value())
-                            println(myTag)
                             it.appendNode("version", myTag)
+                            println(it.value())
                         }
                         if (it.name().equals("lastUpdated")) {
                             println(it.value())
                             Date date = new Date(System.currentTimeMillis())
                             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyddMMHHmmss")
                             it.setValue(dateFormat.format(date))
+                            println(it.value())
                         }
                     }
                 }
