@@ -60,7 +60,7 @@ task setTag {
 }
 
 task downloadAndConfigureMavenMetaData {
-    dolast {
+    doLast {
         if (project.hasProperty("myTag")) {
             def get = new URL("https://maven.mapsindoors.com/com/mapspeople/mapsindoors/mapsindoorsutils/maven-metadata.xml").openConnection()
             def getResponse = get.getResponseCode()
