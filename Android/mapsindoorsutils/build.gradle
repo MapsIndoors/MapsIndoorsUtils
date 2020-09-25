@@ -75,25 +75,25 @@ task downloadAndConfigureMavenMetaData {
             metadata.each {
                 if (it.name().equals("version")) {
                     println(it.value())
-                    println(mVersionName)
-                    it.setValue(mVersionName)
+                    println(myTag)
+                    it.setValue(myTag)
                 }
                 if (it.name().equals("versioning")) {
                     it.each {
                         if (it.name().equals("latest")) {
                             println(it.value())
-                            println(mVersionName)
-                            it.setValue(mVersionName)
+                            println(myTag)
+                            it.setValue(myTag)
                         }
                         if (it.name().equals("release")) {
                             println(it.value())
-                            println(mVersionName)
-                            it.setValue(mVersionName)
+                            println(myTag)
+                            it.setValue(myTag)
                         }
                         if (it.name().equals("versions")) {
                             println(it.value())
-                            println(mVersionName)
-                            it.appendNode("version", mVersionName)
+                            println(myTag)
+                            it.appendNode("version", myTag)
                         }
                         if (it.name().equals("lastUpdated")) {
                             println(it.value())
