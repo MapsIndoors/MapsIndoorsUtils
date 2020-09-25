@@ -66,7 +66,7 @@ task downloadAndConfigureMavenMetaData {
         println(getResponse)
         if (getResponse.equals(200)) {
             File xmlFile = file('maven-metadata.xml')
-            xmlFile.createNewFile()
+            xmlFile.setText("")
             xmlFile.renameTo("maven-metaData.xml")
             xmlFile.append(get.inputStream)
             def metadata = new XmlParser().parse(xmlFile)
