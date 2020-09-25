@@ -57,6 +57,35 @@ task setTag {
     }
 }
 
+task configureMavenMetaData {
+    if (project.hasProperty("myTag")) {
+        File xmlFile = file('maven-metadata.xml')
+        def metadata = new XmlParser().parse(xmlFile)
+
+        metadata.each {
+            if (it.name().equals("version")) {
+                it.setValue(myTag)
+            }
+            if (it.name().equals("versioning")) {
+                it.each {
+                    if (it.name().equals("latest")) {
+                        it.setValue(myTag)
+                    }
+                    if (it.name().equals("release")) {
+                        it.setValue(myTag)
+                    }
+                    if (it.name().equals("versions")) {
+                        it.appendNode("version", myTag)
+                    }
+                    if (it.name().equals("lastUpdated")) {
+                        it.setValue(System.currentTimeMillis())
+                    }
+                }
+            }
+        }
+        new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile))).print(metadata)
+    }
+}
 
 publishing {
     if (project.hasProperty("myTag")) {
