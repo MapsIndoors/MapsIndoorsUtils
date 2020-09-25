@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
@@ -57,33 +59,47 @@ task setTag {
     }
 }
 
-task configureMavenMetaData {
+task downloadAndConfigureMavenMetaData {
     if (project.hasProperty("myTag")) {
-        File xmlFile = file('maven-metadata.xml')
-        def metadata = new XmlParser().parse(xmlFile)
+        def get = new URL("https://maven.mapsindoors.com/com/mapspeople/mapsindoors/mapsindoorsutils/maven-metadata.xml").openConnection()
+        def getResponse = get.getResponseCode()
+        println(getResponse)
+        if (getResponse.equals(200)) {
+            File xmlFile = file('maven-metadata.xml')
+            xmlFile.createNewFile()
+            xmlFile.renameTo("maven-metaData.xml")
+            xmlFile.append(get.inputStream)
+            def metadata = new XmlParser().parse(xmlFile)
 
-        metadata.each {
-            if (it.name().equals("version")) {
-                it.setValue(myTag)
-            }
-            if (it.name().equals("versioning")) {
-                it.each {
-                    if (it.name().equals("latest")) {
-                        it.setValue(myTag)
-                    }
-                    if (it.name().equals("release")) {
-                        it.setValue(myTag)
-                    }
-                    if (it.name().equals("versions")) {
-                        it.appendNode("version", myTag)
-                    }
-                    if (it.name().equals("lastUpdated")) {
-                        it.setValue(System.currentTimeMillis())
+            metadata.each {
+                if (it.name().equals("version")) {
+                    it.setValue(myTag)
+                }
+                if (it.name().equals("versioning")) {
+                    it.each {
+                        if (it.name().equals("latest")) {
+                            it.setValue(myTag)
+                        }
+                        if (it.name().equals("release")) {
+                            it.setValue(myTag)
+                        }
+                        if (it.name().equals("versions")) {
+                            it.appendNode("version", myTag)
+                        }
+                        if (it.name().equals("lastUpdated")) {
+                            Date date = new Date(System.currentTimeMillis())
+                            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyddMMHHmmss")
+                            it.setValue(dateFormat.format(date))
+                        }
                     }
                 }
             }
+            xmlFile.withWriter {
+                def printer = new XmlNodePrinter(new PrintWriter(it))
+                printer.preserveWhitespace = true
+                printer.print(metadata)
+            }
         }
-        new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile))).print(metadata)
     }
 }
 
