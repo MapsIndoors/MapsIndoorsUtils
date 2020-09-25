@@ -62,12 +62,15 @@ task setTag {
 task downloadAndConfigureMavenMetaData {
     doLast {
         if (project.hasProperty("myTag")) {
+            File xmlFile = new File("$buildDir/tmp/maven-metadata.xml")
+            if (xmlFile.exists()) {
+                return
+            }
             def get = new URL("https://maven.mapsindoors.com/com/mapspeople/mapsindoors/mapsindoorsutils/maven-metadata.xml").openConnection()
             def getResponse = get.getResponseCode()
             println(getResponse)
             if (getResponse.equals(200)) {
-                File xmlFile = new File("$buildDir/tmp/maven-metadata.xml")
-                xmlFile.writable(true)
+                xmlFile.setWritable(true)
                 xmlFile.append(get.inputStream)
                 def metadata = new XmlParser().parse(xmlFile)
 
