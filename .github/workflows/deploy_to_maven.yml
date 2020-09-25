@@ -36,4 +36,4 @@ jobs:
             env: 
               s3key: ${{ secrets.AWS_KEY }}
               s3secret: ${{ secrets.AWS_SECRET }}
-            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/maven-metaData.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/" "public-read" "application/xml"
+            run: sh ./scripts/puts3.sh $s3key $s3secret "foliastorage" "./Android/maven-metadata.xml" "com/mapspeople/mapsindoors/mapsindoorsutils/" "public-read" "application/xml"
