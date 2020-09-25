@@ -93,6 +93,7 @@ task downloadAndConfigureMavenMetaData {
                     }
                 }
             }
+            println(xmlFile.getText())
             xmlFile.withWriter {
                 def printer = new XmlNodePrinter(new PrintWriter(it))
                 printer.preserveWhitespace = true
