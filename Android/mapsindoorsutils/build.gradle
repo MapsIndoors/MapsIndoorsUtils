@@ -90,7 +90,7 @@ task downloadAndConfigureMavenMetaData {
                             }
                             if (it.name().equals("lastUpdated")) {
                                 Date date = new Date(System.currentTimeMillis())
-                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyddMMHHmmss")
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
                                 it.setValue(dateFormat.format(date))
                             }
                         }
