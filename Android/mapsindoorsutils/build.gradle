@@ -1,7 +1,16 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
-def mVersionName = "0.1.0"
+
+ext{
+    mVersionName = "0.1.0"
+}
+
+beforeEvaluate {
+    print project.properties.toString()
+}
 
 android {
     compileSdkVersion 27
@@ -39,48 +48,122 @@ dependencies {
 
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // You can then customize attributes of the publication as shown below.
-                from components.release
-                pom {
-                    name = "mapsindoorsutils"
-                    description = "In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point."
-                    url = "https://github.com/MapsIndoors/MapsIndoorsUtils"
-                    licenses {
-                        license {
-                            name = "The Apache License, Version 2.0"
-                            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                        }
+task setTag {
+    doFirst {
+        mVersionName = myTag
+        project.version(myTag)
+        project.logger.lifecycle("mVersionName is = " + mVersionName + "& myTag is = " + myTag)
+    }
+    doLast {
+        renameFiles()
+    }
+}
+
+task downloadAndConfigureMavenMetaData {
+    doLast {
+        if (project.hasProperty("myTag")) {
+            File xmlFile = new File("$buildDir/tmp/maven-metadata.xml")
+            if (xmlFile.exists()) {
+                return
+            }
+            def get = new URL("https://maven.mapsindoors.com/com/mapspeople/mapsindoors/mapsindoorsutils/maven-metadata.xml").openConnection()
+            def getResponse = get.getResponseCode()
+            if (getResponse.equals(200)) {
+                xmlFile.setWritable(true)
+                xmlFile.append(get.inputStream)
+                def metadata = new XmlParser().parse(xmlFile)
+
+                metadata.each {
+                    if (it.name().equals("version")) {
+                        it.setValue(myTag)
                     }
-                    developers {
-                        developer {
-                            id = "mapspeople"
-                            name = "MapsPeople"
-                            email = "mail@mapspeople.com"
+                    if (it.name().equals("versioning")) {
+                        it.each {
+                            if (it.name().equals("latest")) {
+                                it.setValue(myTag)
+                            }
+                            if (it.name().equals("release")) {
+                                it.setValue(myTag)
+                            }
+                            if (it.name().equals("versions")) {
+                                it.appendNode("version", myTag)
+                            }
+                            if (it.name().equals("lastUpdated")) {
+                                Date date = new Date(System.currentTimeMillis())
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
+                                it.setValue(dateFormat.format(date))
+                            }
                         }
-                    }
-                    scm {
-                        connection = "scm:git:git://github.com/mapsindoors/mapsindoorsutils.git"
-                        developerConnection = "scm:git:ssh://github.com:mapsindoors/mapsindoorsutils.git"
-                        url = "http://github.com/mapsindoors/mapsindoorsutils/android"
                     }
                 }
-                groupId = 'com.mapspeople.mapsindoors'
-                artifactId = 'mapsindoorsutils'
-                version = mVersionName
-            }
-            // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                from components.debug
-
-                groupId = 'com.mapspeople.mapsindoors'
-                artifactId = 'mapsindoorsutils-debug'
-                version = mVersionName
+                xmlFile.withWriter {
+                    def printer = new XmlNodePrinter(new PrintWriter(it))
+                    printer.preserveWhitespace = true
+                    printer.print(metadata)
+                    println("printed")
+                }
             }
         }
+    }
+}
+
+publishing {
+    if (project.hasProperty("myTag")) {
+        mVersionName = myTag
+    }
+    publications {
+        // Creates a Maven publication called "release".
+        release(MavenPublication) {
+            // You can then customize attributes of the publication as shown below
+            pom {
+
+                name = "mapsindoorsutils"
+                description = "In order to make it easier to work with the appearance of special icons on the MapsIndoors map, we are releasing some rendering helpers in a Utility Library for each MapsIndoors platform. We don’t want to force an app into a specific visualization, so the helpers create a sensible default, with a few options for configuration. If a developer is not happy with defaults or the ways it can be configured, it is possible to create a rendering from the scratch or create a modified rendering with this source code as a starting point."
+                url = "https://github.com/MapsIndoors/MapsIndoorsUtils"
+                licenses {
+                    license {
+                        name = "The Apache License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "mapspeople"
+                        name = "MapsPeople"
+                        email = "mail@mapspeople.com"
+                    }
+                }
+                scm {
+                    connection = "scm:git:git://github.com/mapsindoors/mapsindoorsutils.git"
+                    developerConnection = "scm:git:ssh://github.com:mapsindoors/mapsindoorsutils.git"
+                    url = "http://github.com/mapsindoors/mapsindoorsutils/android"
+                }
+            }
+            groupId = 'com.mapspeople.mapsindoors'
+            artifactId = 'mapsindoorsutils'
+            version = mVersionName
+        }
+        // Creates a Maven publication called “debug”.
+        debug(MavenPublication) {
+
+            groupId = 'com.mapspeople.mapsindoors'
+            artifactId = 'mapsindoorsutils-debug'
+            version = mVersionName
+        }
+    }
+}
+
+def renameFiles() {
+    copy {
+        from('build/outputs/aar'){
+            include('mapsindoorsutils-release.aar')
+            rename('mapsindoorsutils-release.aar', "mapsindoorsutils-"+ mVersionName + ".aar")
+        }
+
+        from('build/publications/release') {
+            include('pom-default.xml')
+            rename('pom-default.xml', "mapsindoorsutils-" + mVersionName + ".pom")
+        }
+        into('build/outputs/aar')
     }
 }
